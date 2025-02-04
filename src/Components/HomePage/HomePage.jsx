@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Button } from "react-bootstrap";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -18,9 +19,12 @@ const HomePage = () => {
     <>
       <div className="homepage">
         <h1>Welcome to Our Homepage</h1>
+        <div className="d-block d-sm-none">
+          <Button variant="dark" size="sm" className="order-btn order">
+            ORDER NOW
+          </Button>
+        </div>
       </div>
-
-    
     </>
   );
 };

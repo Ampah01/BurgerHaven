@@ -21,7 +21,7 @@ const Homer = () => {
   return (
     <div className="starter-section">
       {/* Carousel for small screens */}
-      <div className="d-block d-sm-none carousel-container">
+      <div className="d-none d-md-none carousel-container">
         <Carousel interval={3000} indicators={false} controls={true}>
           {foodItems.map((item, index) => (
             <Carousel.Item key={index} className="carousel-item-custom">
