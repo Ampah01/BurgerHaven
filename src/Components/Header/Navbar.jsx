@@ -1,0 +1,204 @@
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { useState, useEffect, useRef } from "react";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import "./Navbar.css"; // Import custom CSS for styling
+
+const Header = () => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 991);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownTimeout = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 991);
+      if (window.innerWidth > 991) {
+        setIsMenuOpen(false); // Ensure menu closes on desktop view
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (dropdownTimeout.current) {
+      clearTimeout(dropdownTimeout.current); // Cancel closing timer if user re-enters
+    }
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownTimeout.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 5000); // Start 5-second delay before closing
+  };
+
+  const handleDropdownMouseEnter = () => {
+    if (dropdownTimeout.current) {
+      clearTimeout(dropdownTimeout.current); // Stop closing when inside dropdown
+    }
+  };
+
+  const handleDropdownMouseLeave = () => {
+    setIsDropdownOpen(false); // Close immediately when leaving the dropdown area
+  };
+
+  const handleNavLinkEnter = () => {
+    if (dropdownTimeout.current) {
+      clearTimeout(dropdownTimeout.current); // Close dropdown immediately when entering another nav link
+    }
+    setIsDropdownOpen(false); // Close dropdown when moving to another link
+  };
+
+  const handleDropdownClick = () => {
+    setIsDropdownOpen(!isDropdownOpen); // Toggle dropdown on click
+  };
+
+  return (
+    <Navbar
+      expand="lg"
+      bg="white"
+      variant="light"
+      className="shadow-sm sticky-top"
+    >
+      <Container className="d-flex justify-content-md-between align-items-center mx-10">
+        {/* Brand (Left) */}
+        <Navbar.Brand href="/" className="text-dark navbar-brand-custom">
+          ACCRA EAST LEGON
+        </Navbar.Brand>
+
+        {/* Hamburger Toggle for Mobile */}
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          aria-label="Toggle navigation"
+          className="border-0"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <div className={`hamburger ${isMenuOpen ? "open" : ""}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </Navbar.Toggle>
+
+        {/* Navbar Collapse for Centered Navigation Links */}
+        <Navbar.Collapse id="basic-navbar-nav" in={isMenuOpen}>
+          <Nav className="mx-auto text-center">
+            <Nav.Link
+              href="/"
+              className="nav-link-custom"
+              onMouseEnter={handleNavLinkEnter}
+            >
+              HOME
+            </Nav.Link>
+
+            {/* Menu Dropdown */}
+            <NavDropdown
+              title={<span className="nav-link-custom">MENUS</span>}
+              id="menu-dropdown"
+              className="nav-link-custom"
+              show={isDesktop ? isDropdownOpen : undefined}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div
+                onMouseEnter={handleDropdownMouseEnter}
+                onMouseLeave={handleDropdownMouseLeave}
+              >
+                <NavDropdown.Item
+                  href="/menu/all_day_menu"
+                  className="nav-link-custom"
+                >
+                  LUNCH (PDF)
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="/menu/all_day_menu"
+                  className="nav-link-custom"
+                >
+                  ALL DAY MENU (PDF)
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="/menu/burger"
+                  className="nav-link-custom"
+                >
+                  BURGER (PDF)
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="/menu/beer/no_beer"
+                  className="nav-link-custom"
+                >
+                  BEER / NO BEER (PDF)
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="/menu/specials"
+                  className="nav-link-custom"
+                >
+                  SPECIALS (PDF)
+                </NavDropdown.Item>
+              </div>
+            </NavDropdown>
+
+            <Nav.Link
+              href="/order"
+              className="nav-link-custom"
+              onMouseEnter={handleNavLinkEnter}
+            >
+              ORDER
+            </Nav.Link>
+            <Nav.Link
+              href="/press"
+              className="nav-link-custom"
+              onMouseEnter={handleNavLinkEnter}
+            >
+              ABOUT
+            </Nav.Link>
+            <Nav.Link
+              href="/about"
+              className="nav-link-custom"
+              onMouseEnter={handleNavLinkEnter}
+            >
+              CONTACT
+            </Nav.Link>
+            <Nav.Link
+              href="/contact"
+              className="nav-link-custom"
+              onMouseEnter={handleNavLinkEnter}
+            >
+              PRESS
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+
+        {/* Social Media Icons (Right) */}
+        <div className="social-icons d-none d-lg-flex gap-3">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            className="text-dark"
+            aria-label="Facebook"
+          >
+            <FaFacebookF size={15} />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            className="text-dark"
+            aria-label="Twitter"
+          >
+            <FaTwitter size={15} />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            className="text-dark"
+            aria-label="Instagram"
+          >
+            <FaInstagram size={15} />
+          </a>
+        </div>
+      </Container>
+    </Navbar>
+  );
+};
+
+export default Header;
