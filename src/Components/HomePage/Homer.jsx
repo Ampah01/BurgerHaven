@@ -8,6 +8,7 @@ import {
   Carousel,
   Card,
 } from "react-bootstrap";
+import { motion } from "framer-motion"; 
 import "./Homepage.css"; // Import the custom CSS file
 
 const Homer = () => {
@@ -19,53 +20,48 @@ const Homer = () => {
   ];
 
   return (
-    <div className="starter-section">
-      {/* Carousel for small screens */}
-      <div className="d-none d-md-none carousel-container">
-        <Carousel interval={3000} indicators={false} controls={true}>
-          {foodItems.map((item, index) => (
-            <Carousel.Item key={index} className="carousel-item-custom">
-              <Card className="food-card">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fluid
-                  className="food-image-carousel"
-                />
-                <Card.Body>
-                  <Card.Title>{item.alt}</Card.Title>
-                </Card.Body>
-              </Card>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-        {/* Order button below the carousel */}
-        <Button variant="dark" size="sm" className="order-btn">
-          ORDER NOW
-        </Button>
-      </div>
+    <div className="starter-section d-none d-sm-block">
+      {/* Heading */}
+      <Container className="text-center my-4">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="fw-bold"
+        >
+          Our Starters
+        </motion.h2>
+      </Container>
 
       {/* Grid layout for larger screens */}
-      <section className="starter-packs d-none d-sm-block">
+      <section className="starter-packs">
         <Container>
           <Row className="g-4 justify-content-center">
             {foodItems.map((item, index) => (
               <Col xs={12} sm={6} md={3} key={index}>
-                <Card className="food-card">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fluid
-                    className="food-image"
-                  />
-                  <Card.Body className="food-title">
-                    <Card.Title>{item.alt}</Card.Title>
-                  </Card.Body>
-                </Card>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  <Card className="food-card">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fluid
+                      className="food-image"
+                    />
+                    <Card.Body className="food-title">
+                      <Card.Title>{item.alt}</Card.Title>
+                    </Card.Body>
+                  </Card>
+                </motion.div>
               </Col>
             ))}
           </Row>
-          <Button variant="dark" size="sm" className="order-btn">
+          <Button variant="dark" size="sm" className="order-btn mt-3">
             ORDER NOW
           </Button>
         </Container>

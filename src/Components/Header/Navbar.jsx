@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { useState, useEffect, useRef } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import "./Navbar.css"; // Import custom CSS for styling
+import "./Navbar.css"; 
 
 const Header = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 991);
@@ -13,7 +13,7 @@ const Header = () => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth > 991);
       if (window.innerWidth > 991) {
-        setIsMenuOpen(false); // Ensure menu closes on desktop view
+        setIsMenuOpen(false); 
       }
     };
     window.addEventListener("resize", handleResize);
@@ -22,7 +22,7 @@ const Header = () => {
 
   const handleMouseEnter = () => {
     if (dropdownTimeout.current) {
-      clearTimeout(dropdownTimeout.current); // Cancel closing timer if user re-enters
+      clearTimeout(dropdownTimeout.current); 
     }
     setIsDropdownOpen(true);
   };
@@ -30,28 +30,28 @@ const Header = () => {
   const handleMouseLeave = () => {
     dropdownTimeout.current = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 5000); // Start 5-second delay before closing
+    }, 5000); 
   };
 
   const handleDropdownMouseEnter = () => {
     if (dropdownTimeout.current) {
-      clearTimeout(dropdownTimeout.current); // Stop closing when inside dropdown
+      clearTimeout(dropdownTimeout.current); 
     }
   };
 
   const handleDropdownMouseLeave = () => {
-    setIsDropdownOpen(false); // Close immediately when leaving the dropdown area
+    setIsDropdownOpen(false); 
   };
 
   const handleNavLinkEnter = () => {
     if (dropdownTimeout.current) {
-      clearTimeout(dropdownTimeout.current); // Close dropdown immediately when entering another nav link
+      clearTimeout(dropdownTimeout.current); 
     }
-    setIsDropdownOpen(false); // Close dropdown when moving to another link
+    setIsDropdownOpen(false); 
   };
 
   const handleDropdownClick = () => {
-    setIsDropdownOpen(!isDropdownOpen); // Toggle dropdown on click
+    setIsDropdownOpen(!isDropdownOpen); 
   };
 
   return (
@@ -62,12 +62,10 @@ const Header = () => {
       className="shadow-sm sticky-top"
     >
       <Container className="d-flex justify-content-md-between align-items-center mx-10">
-        {/* Brand (Left) */}
         <Navbar.Brand href="/" className="text-dark navbar-brand-custom">
           ACCRA EAST LEGON
         </Navbar.Brand>
 
-        {/* Hamburger Toggle for Mobile */}
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           aria-label="Toggle navigation"
@@ -81,7 +79,6 @@ const Header = () => {
           </div>
         </Navbar.Toggle>
 
-        {/* Navbar Collapse for Centered Navigation Links */}
         <Navbar.Collapse id="basic-navbar-nav" in={isMenuOpen}>
           <Nav className="mx-auto text-center">
             <Nav.Link
@@ -92,7 +89,6 @@ const Header = () => {
               HOME
             </Nav.Link>
 
-            {/* Menu Dropdown */}
             <NavDropdown
               title={<span className="nav-link-custom">MENUS</span>}
               id="menu-dropdown"
@@ -168,8 +164,8 @@ const Header = () => {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-
-        {/* Social Media Icons (Right) */}
+ 
+ \
         <div className="social-icons d-none d-lg-flex gap-3">
           <a
             href="https://facebook.com"
