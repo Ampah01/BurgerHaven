@@ -67,19 +67,17 @@
   margin: 0 auto;
 }
 
-@media (min-width: 991px) {
+@media (min-width: 768px) {
   .navbar-nav .nav-item .dropdown-menu {
     align-items: start;
     width: 200px;
     margin: 15px auto;
   }
 
-  .navbar-brand-custom{
-    margin-left: 100px
-  }
+ 
   
 }
-@media (max-width: 991px) {
+@media (max-width: 768) {
   .navbar-brand-custom,
   .nav-link-custom {
     font-family: Arial, sans-serif;

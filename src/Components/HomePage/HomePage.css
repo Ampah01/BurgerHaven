@@ -1,27 +1,91 @@
 .homepage {
-  background-image: url("/images/best.jpg");
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  height: 100vh; /* Full viewport height */
   width: 100%;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  transform: translateY(0);
-  transition: transform 0.3s ease-out;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  background: url("/images/best.jpg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align text to the left */
+  padding-left: 5%; /* Add left padding */
+  text-align: left; /* Align text to the left */
+  color: #722f37; /* Wine color text */
+}
+
+
+.homepage-content {
+  max-width: 600px;
+}
+
+.homepage-title {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-top: -120px
+}
+
+.homepage-tagline {
+  color: black;
+  font-size: 20px
+}
+
+.burger-text {
+  display: block;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.haven-text {
+  display: block;
+  font-size: 4.2rem;
+  font-weight: 600;
+  color: ##722f37; /* Slightly lighter wine shade for contrast */
 }
 
 .order-btn {
-  margin-top: 20px; /* Adds some space below the heading */
-}
-.starter-packs{
-  margin: 60px auto;
+  margin-top: 15px;
+  background-color: #722f37 !important; /* Wine color for button */
+  border-color: #722f37 !important;
 }
 
+/* Responsive Design */
+@media (max-width: 568px) {
+  .homepage {
+    justify-content: center; /* Center on small screens */
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .homepage-content {
+    max-width: 100%;
+  }
+
+  .homepage-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    line-height: 0.8;
+    display: flex;
+  }
+
+  .burger-text {
+    font-size: 2.5rem;
+  }
+
+  .haven-text {
+    font-size: 2.5rem;
+    
+  }
+  .homepage-tagline {
+    font-size: 1rem;
+    margin-top: 1px;
+    font-weight: 500
+  }
+  
+}
+
+.starter-packs {
+  margin: 60px auto;
+}
 
 .starter-section {
   padding: 40px 0;
@@ -33,14 +97,15 @@
   max-width: 230px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  margin: 0 auto
+  margin: 0 auto;
+  margin-bottom: 30px
 }
 
 .food-card:hover .food-image {
   filter: brightness(0.5);
 }
 .food-card:hover .card-body {
-  opacity: 1; 
+  opacity: 1;
 }
 .food-card .food-title {
   font-size: 1.2rem;
@@ -85,7 +150,7 @@
 }
 
 .order-btn {
-  margin-top: 35px;
+  margin: 15px;
   background-color: #650c1f;
   border: none;
   padding: 8px 20px;

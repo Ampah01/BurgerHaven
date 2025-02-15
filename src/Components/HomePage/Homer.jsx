@@ -61,7 +61,7 @@ const Homer = () => {
               </Col>
             ))}
           </Row>
-          <Button variant="dark" size="sm" className="order-btn mt-3">
+          <Button variant="dark" size="sm" className="order-btn mt-3 order">
             ORDER NOW
           </Button>
         </Container>

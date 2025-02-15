@@ -56,12 +56,12 @@ const Header = () => {
 
   return (
     <Navbar
-      expand="lg"
+      expand="md"
       bg="white"
       variant="light"
       className="shadow-sm sticky-top"
     >
-      <Container className="d-flex justify-content-md-between align-items-center mx-10">
+      <Container className="d-flex justify-content-md-between align-items-center mx-lg-10">
         <Navbar.Brand href="/" className="text-dark navbar-brand-custom">
           ACCRA EAST LEGON
         </Navbar.Brand>
@@ -165,7 +165,6 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
  
- \
         <div className="social-icons d-none d-lg-flex gap-3">
           <a
             href="https://facebook.com"
