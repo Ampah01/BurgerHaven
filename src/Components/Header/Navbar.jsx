@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { useState, useEffect, useRef } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import "./Navbar.css"; 
+import "./Navbar.css";
 
 const Header = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 991);
@@ -13,7 +13,7 @@ const Header = () => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth > 991);
       if (window.innerWidth > 991) {
-        setIsMenuOpen(false); 
+        setIsMenuOpen(false);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -22,7 +22,7 @@ const Header = () => {
 
   const handleMouseEnter = () => {
     if (dropdownTimeout.current) {
-      clearTimeout(dropdownTimeout.current); 
+      clearTimeout(dropdownTimeout.current);
     }
     setIsDropdownOpen(true);
   };
@@ -30,28 +30,28 @@ const Header = () => {
   const handleMouseLeave = () => {
     dropdownTimeout.current = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 5000); 
+    }, 5000);
   };
 
   const handleDropdownMouseEnter = () => {
     if (dropdownTimeout.current) {
-      clearTimeout(dropdownTimeout.current); 
+      clearTimeout(dropdownTimeout.current);
     }
   };
 
   const handleDropdownMouseLeave = () => {
-    setIsDropdownOpen(false); 
+    setIsDropdownOpen(false);
   };
 
   const handleNavLinkEnter = () => {
     if (dropdownTimeout.current) {
-      clearTimeout(dropdownTimeout.current); 
+      clearTimeout(dropdownTimeout.current);
     }
-    setIsDropdownOpen(false); 
+    setIsDropdownOpen(false);
   };
 
   const handleDropdownClick = () => {
-    setIsDropdownOpen(!isDropdownOpen); 
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -164,7 +164,7 @@ const Header = () => {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
- 
+
         <div className="social-icons d-none d-lg-flex gap-3">
           <a
             href="https://facebook.com"

@@ -31,8 +31,6 @@
   display: block;
 }
 
-
-
 /* Social Icons */
 .social-icons a {
   text-decoration: none;
@@ -73,9 +71,6 @@
     width: 200px;
     margin: 15px auto;
   }
-
- 
-  
 }
 @media (max-width: 768) {
   .navbar-brand-custom,
@@ -86,11 +81,9 @@
     transition: color 0.3s ease-in-out;
   }
 
-  .navbar-brand-custom{
-    margin-left: -20px
+  .navbar-brand-custom {
+    margin-left: -20px;
   }
-  
-  
 }
 
 .navbar .nav {
@@ -125,4 +118,3 @@
   padding: 10px 20px;
 }
 
-/* Navbar Links */

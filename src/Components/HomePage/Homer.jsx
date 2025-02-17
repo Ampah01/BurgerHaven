@@ -1,38 +1,18 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Image,
-  Carousel,
-  Card,
-} from "react-bootstrap";
-import { motion } from "framer-motion"; 
+import { Container, Row, Col, Button, Image, Card } from "react-bootstrap";
+import { motion } from "framer-motion";
 import "./Homepage.css"; // Import the custom CSS file
 
 const Homer = () => {
   const foodItems = [
-    { src: "/images/burger.jpg", alt: "Wings" },
-    { src: "/images/burger.jpg", alt: "Burger" },
-    { src: "/images/burger.jpg", alt: "Tacos" },
-    { src: "/images/burger.jpg", alt: "Dessert" },
+    { src: "/images/starter.jpg", alt: "starters" },
+    { src: "/images/burger.jpg", alt: "burgers" },
+    { src: "/images/main.jpg", alt: "main" },
+    { src: "/images/dessert.jpg", alt: "desserts" },
   ];
-
+  
   return (
     <div className="starter-section d-none d-sm-block">
-      {/* Heading */}
-      <Container className="text-center my-4">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="fw-bold"
-        >
-          Our Starters
-        </motion.h2>
-      </Container>
 
       {/* Grid layout for larger screens */}
       <section className="starter-packs">

@@ -8,6 +8,8 @@
   padding-left: 5%; /* Add left padding */
   text-align: left; /* Align text to the left */
   color: #722f37; /* Wine color text */
+  border: none; /* Remove any borders */
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2); /* Add shadow at the bottom */
 }
 
 
@@ -84,7 +86,8 @@
 }
 
 .starter-packs {
-  margin: 60px auto;
+  margin: 30px auto;
+  width: 70%
 }
 
 .starter-section {
@@ -94,24 +97,21 @@
 }
 
 .food-card {
-  max-width: 230px;
+  max-width: 200px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   margin: 0 auto;
-  margin-bottom: 30px
+  margin-bottom: 30px;
+  cursor: pointer
 }
 
 .food-card:hover .food-image {
-  filter: brightness(0.5);
+  filter: brightness(0.3);
 }
 .food-card:hover .card-body {
   opacity: 1;
 }
-.food-card .food-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-}
+
 .food-image {
   width: 100%;
   height: auto;
@@ -120,7 +120,7 @@
 
 .food-card .card-body {
   position: absolute;
-  bottom: 100px;
+  bottom: 70px;
   left: 0;
   right: 0;
   color: #fff;
@@ -130,33 +130,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.carousel-container {
-  max-width: 250px;
-  margin: 0 auto;
-  padding: 15px 0;
-}
-
-.carousel-item-custom {
-  padding: 10px 0;
-}
-
-.food-image-carousel {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 100%;
-  height: auto;
+  font-family: 'Merriweather', serif;
+  font-size: 24px
 }
 
 .order-btn {
   margin: 15px;
-  background-color: #650c1f;
+  background-color:rgb(124, 11, 35);
   border: none;
-  padding: 8px 20px;
+  padding: 10px 20px;
   font-weight: bold;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
+  border-radius: 2px;
 }
 
 .order-btn:hover {
@@ -175,4 +160,11 @@
   .homer {
     transform: translateY(-20px);
   }
+}
+
+@media (max-width: 800px) {
+  .starter-packs {
+    width: 85%
+  }
+  
 }
