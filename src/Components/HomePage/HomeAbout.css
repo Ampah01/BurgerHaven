@@ -37,9 +37,11 @@ h2 {
 }
 
 .text {
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 5px;
   color: #9e3d45;
+  font-family: 'Mulish', sans-serif;
+  font-style: italic;
 }
 
 .contact-icons {
@@ -50,14 +52,13 @@ h2 {
 }
 
 .social-icon {
-  color: #722f37;
+  color: black;
   font-size: 16px;
   transition: 0.3s;
 }
 
 .social-icon:hover {
   transform: scale(1.1);
-  color: #9e3d45;
 }
 
 /* Hours Section */
@@ -66,23 +67,28 @@ h2 {
   flex-direction: column;
   align-items: center;
   font-size: 12px;
+  margin: 0 auto
 }
 
 .day {
-  font-weight: bold;
-  min-width: 100px;
+  min-width: 120px;
   display: inline-block;
+  text-align: start
 }
 
 .time {
-  min-width: 120px;
+  min-width: 90px;
   display: inline-block;
+  text-align: start
 }
 
 /* Phone Section */
 .section-title {
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 25px;
+  margin-top: 5px;
+  color: #9e3d45;
+  font-weight: 400;
+  margin: 10px auto  
 }
 
 p {
@@ -156,15 +162,7 @@ p {
   margin-right: 5px;
 }
 
-.divider {
-  height: 1px;
-  background-color: black;
-  margin: 10px auto;
-}
-.section-title {
-  color: black;
-  margin-top: 20px;
-}
+
 
 @media (max-width: 768px) {
   .homeabout {
@@ -185,6 +183,7 @@ p {
   p {
     font-size: 16px;
   }
+ 
 
   .contact-icons {
     flex-direction: column;
@@ -203,20 +202,20 @@ p {
 }
 
 @media (max-width: 576px) {
-  .homeabout {
-    background: none;
-  }
   content,
   h2,
   .text,
   .divider {
     display: none;
-  }
 
+  }
+  .dates-available{
+    margin:15px auto
+  }
   .overlay {
     padding: 15px;
     width: 100%;
-    margin-top: -420px;
+    margin-top: -120px;
   }
   .overlay-left {
     display: none;
@@ -224,6 +223,7 @@ p {
   .text,
   p {
     font-size: 18px;
+    margin: 5px;
   }
 
   .social-icon {
@@ -231,6 +231,35 @@ p {
   }
 
   .about-button {
-    display:none
+    display: none;
   }
+  .section-title{
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+  }
+
+  .social-icons-container {
+    margin-top: 150px;
+    width: 100%;
+    height: 250px;
+    padding: 30px;
+    font-family: 'Mulish', sans-serif;
+    background-color: white
+  }
+  .social-icons-container h4 {
+    font-size: 1.6rem;
+    letter-spacing: 1.7px;
+  }
+ .social-icons-container p {
+  font-size: 1.4rem;
+  letter-spacing: 1.3px;
+ }
+ .day {
+  min-width: 120px;
+}
+
+.time {
+  min-width: 120px;
+}
 }

@@ -9,7 +9,6 @@
   text-align: left; /* Align text to the left */
   color: #722f37; /* Wine color text */
   border: none; /* Remove any borders */
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2); /* Add shadow at the bottom */
 }
 
 
@@ -42,12 +41,6 @@
   font-size: 4.2rem;
   font-weight: 600;
   color: ##722f37; /* Slightly lighter wine shade for contrast */
-}
-
-.order-btn {
-  margin-top: 15px;
-  background-color: #722f37 !important; /* Wine color for button */
-  border-color: #722f37 !important;
 }
 
 /* Responsive Design */
@@ -136,16 +129,16 @@
 
 .order-btn {
   margin: 15px;
-  background-color:rgb(124, 11, 35);
+  background-color: #722f37;
   border: none;
   padding: 10px 20px;
-  font-weight: bold;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
 }
 
 .order-btn:hover {
-  background-color: #500a19;
+  background: #9e3d45;
+  transform: scale(1.05);
 }
 
 @media (prefers-reduced-motion: no-preference) {

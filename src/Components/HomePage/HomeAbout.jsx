@@ -1,5 +1,11 @@
 import "./HomeAbout.css";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
@@ -13,10 +19,12 @@ const HomeAbout = () => {
         <div className="content">
           <h2>ABOUT</h2>
           <p className="text">0ur restaurant</p>
-          <div className="divider"></div>
+          <div className="divider">
+            <hr   />
+          </div>
 
           <div className="contact-icons">
-            <Container className="text-center mt-2">
+            <Container className="text-center my-3">
               <motion.a
                 href="tel:+2122601212"
                 className="social-icon mx-3"
@@ -105,7 +113,7 @@ const HomeAbout = () => {
                 To place an order for pickup, please order via{" "}
                 <a href="#">Square</a>.
               </p>
-              <button>ORDER PICKUP</button>
+              <button className="about-button">ORDER PICKUP</button>
             </div>
             <div className="order-section">
               <h3>DELIVERY EXPANDED</h3>
@@ -120,6 +128,39 @@ const HomeAbout = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="social-icons-container d-block d-sm-none text-start mt-10">
+        <h4>connect with us</h4>
+        <div className="d-flex justify-content-start gap-3 mt-4">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-dark rounded-circle p-3"
+          >
+            <FaFacebookF size={24} />
+          </a>
+
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-dark rounded-circle p-3"
+          >
+            <FaTwitter size={24} />
+          </a>
+
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-dark rounded-circle p-3"
+          >
+            <FaInstagram size={24} />
+          </a>
+        </div>
+        <p className="mt-5 ">follow us on instagram</p>
       </div>
     </div>
   );
