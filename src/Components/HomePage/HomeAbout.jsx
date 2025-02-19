@@ -9,6 +9,7 @@ import {
 import { FaLocationDot } from "react-icons/fa6";
 import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
+import VideoElement from "./VideoElement";
 
 const HomeAbout = () => {
   return (
@@ -20,14 +21,14 @@ const HomeAbout = () => {
           <h2>ABOUT</h2>
           <p className="text">0ur restaurant</p>
           <div className="divider">
-            <hr   />
+            <hr />
           </div>
 
           <div className="contact-icons">
             <Container className="text-center my-3">
               <motion.a
-                href="tel:+2122601212"
-                className="social-icon mx-3"
+                href="tel:+233200484457"
+                className="social-icon mx-4"
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -39,7 +40,7 @@ const HomeAbout = () => {
                 href="https://maps.google.com/?q=Your+Restaurant+Address"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-icon mx-3"
+                className="social-icon mx-4"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -49,7 +50,7 @@ const HomeAbout = () => {
 
               <motion.a
                 href="mailto:info@burgurhaven.com"
-                className="social-icon mx-3"
+                className="social-icon mx-4"
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
@@ -92,7 +93,7 @@ const HomeAbout = () => {
           </div>
 
           <h4 className="section-title">PHONE</h4>
-          <p>212.260.1212</p>
+          <p>233.260.1212</p>
           <p>212.260.7049</p>
 
           <div className="about-button-container">
@@ -162,6 +163,7 @@ const HomeAbout = () => {
         </div>
         <p className="mt-5 ">follow us on instagram</p>
       </div>
+      <VideoElement />
     </div>
   );
 };
