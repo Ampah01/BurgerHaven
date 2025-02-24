@@ -1,0 +1,56 @@
+.footer {
+    background-color: black;
+    color: #fff;
+}
+.title p{
+    text-align: center;
+    color: white
+}
+
+.footer-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-address,
+.footer-contacts {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-divider {
+    border: 1px dotted #fff;
+    font-weight: 700;
+    width: 33%;
+    margin: auto;
+    margin-top: -10px
+}
+
+.footer-icons {
+    font-size: 1.5rem;
+}
+
+.footer-icon {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.footer-copy,
+.footer-designer {
+    font-size: 0.7rem;
+}
+
+.footer-link {
+    color: white
+}
+.footer-links {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 500
+}
+
+.foot-last{
+    font-size: 13px
+}

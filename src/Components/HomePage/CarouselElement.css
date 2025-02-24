@@ -12,7 +12,6 @@
     position: relative;
   }
   
-  /* Default play button styles (not centered for larger screens) */
   .play-button {
     position: absolute;
     background: rgba(0, 0, 0, 0.6);

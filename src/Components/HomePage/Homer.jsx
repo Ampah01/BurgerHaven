@@ -14,7 +14,6 @@ const Homer = () => {
   return (
     <div className="starter-section d-none d-sm-block">
 
-      {/* Grid layout for larger screens */}
       <section className="starter-packs">
         <Container>
           <Row className="g-4 justify-content-center">

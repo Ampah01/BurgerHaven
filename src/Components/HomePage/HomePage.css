@@ -1,14 +1,14 @@
 .homepage {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   background: url("/images/best.jpg") no-repeat center/cover;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align text to the left */
-  padding-left: 5%; /* Add left padding */
-  text-align: left; /* Align text to the left */
-  color: #722f37; /* Wine color text */
-  border: none; /* Remove any borders */
+  justify-content: flex-start; 
+  padding-left: 5%; 
+  text-align: left; 
+  color: #722f37; 
+  border: none;
 }
 
 
@@ -40,13 +40,12 @@
   display: block;
   font-size: 4.2rem;
   font-weight: 600;
-  color: ##722f37; /* Slightly lighter wine shade for contrast */
+  color: ##722f37; 
 }
 
-/* Responsive Design */
 @media (max-width: 568px) {
   .homepage {
-    justify-content: center; /* Center on small screens */
+    justify-content: center; 
     text-align: center;
     padding-left: 0;
   }

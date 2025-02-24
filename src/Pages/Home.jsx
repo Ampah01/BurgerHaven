@@ -3,6 +3,9 @@ import { FaArrowUp } from "react-icons/fa";
 import HomePage from "../Components/HomePage/HomePage";
 import Homer from "../Components/HomePage/Homer";
 import HomeAbout from "../Components/HomePage/HomeAbout";
+import Testimonial from "../Components/HomePage/Testimonial";
+import TestimonialTwo from "../Components/HomePage/TestimonialTwo";
+import Footer from "../Components/Footer/Footer";
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
@@ -25,12 +28,15 @@ const Home = () => {
       <HomePage />
       <Homer />
       <HomeAbout />
+      <Testimonial />
+      <TestimonialTwo />
+      <Footer />
 
       {showButton && (
         <button
           className="position-fixed bottom-0 end-0 m-4 rounded-circle p-3 shadow"
           onClick={scrollToTop}
-          style={{ backgroundColor: "#9e3d45", color: "white", border: "none" }}
+          style={{ backgroundColor: "white ", color: "black", border: "none" }}
         >
           <FaArrowUp size={20} />
         </button>

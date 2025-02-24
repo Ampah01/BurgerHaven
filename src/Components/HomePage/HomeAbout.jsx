@@ -9,7 +9,7 @@ import {
 import { FaLocationDot } from "react-icons/fa6";
 import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
-import VideoElement from "./VideoElement";
+import CarouselElement from "./CarouselElement";
 
 const HomeAbout = () => {
   return (
@@ -30,8 +30,9 @@ const HomeAbout = () => {
                 href="tel:+233200484457"
                 className="social-icon mx-4"
                 initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }} 
               >
                 <FaPhoneAlt />
               </motion.a>
@@ -42,8 +43,9 @@ const HomeAbout = () => {
                 rel="noopener noreferrer"
                 className="social-icon mx-4"
                 initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <FaLocationDot />
               </motion.a>
@@ -52,8 +54,9 @@ const HomeAbout = () => {
                 href="mailto:info@burgurhaven.com"
                 className="social-icon mx-4"
                 initial={{ x: 100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <FaEnvelope />
               </motion.a>
@@ -93,8 +96,8 @@ const HomeAbout = () => {
           </div>
 
           <h4 className="section-title">PHONE</h4>
-          <p>233.260.1212</p>
-          <p>212.260.7049</p>
+          <p>020.048.4457</p>
+          <p>027.124.9156</p>
 
           <div className="about-button-container">
             <button className="about-button">About Us</button>
@@ -122,7 +125,7 @@ const HomeAbout = () => {
                 To place an order for delivery, please choose from one of our
                 partners below:
               </p>
-              <p className="partners">
+              <p className="partners mt-5">
                 <a href="#">Postmates</a>, <a href="#">GrubHub</a>,
                 <a href="#">Seamless</a> & <a href="#">UberEats</a>
               </p>
@@ -163,7 +166,7 @@ const HomeAbout = () => {
         </div>
         <p className="mt-5 ">follow us on instagram</p>
       </div>
-      <VideoElement />
+      <CarouselElement />
     </div>
   );
 };

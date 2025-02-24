@@ -3,9 +3,9 @@ import { FaPlay } from "react-icons/fa";
 import videoFile from "../../../public/video/file4.mp4";
 import videoFile2 from "../../../public/video/file2.mp4";
 import videoFile3 from "../../../public/video/file3.mp4";
-import "./VideoElement.css";
+import "./CarouselElement.css";
 
-const VideoElement = () => {
+const CarouselElement = () => {
   const [playing, setPlaying] = useState({});
 
   const handlePlay = (index) => {
@@ -114,4 +114,4 @@ const VideoElement = () => {
   );
 };
 
-export default VideoElement;
+export default CarouselElement;
