@@ -1,15 +1,10 @@
 import "./HomeAbout.css";
-import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
 import CarouselElement from "./CarouselElement";
+import Social from "./Social";
 
 const HomeAbout = () => {
   return (
@@ -32,7 +27,7 @@ const HomeAbout = () => {
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.5 }} 
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <FaPhoneAlt />
               </motion.a>
@@ -134,38 +129,7 @@ const HomeAbout = () => {
         </div>
       </div>
 
-      <div className="social-icons-container d-block d-sm-none text-start mt-10">
-        <h4>connect with us</h4>
-        <div className="d-flex justify-content-start gap-3 mt-4">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-dark rounded-circle p-3"
-          >
-            <FaFacebookF size={24} />
-          </a>
-
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-dark rounded-circle p-3"
-          >
-            <FaTwitter size={24} />
-          </a>
-
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-dark rounded-circle p-3"
-          >
-            <FaInstagram size={24} />
-          </a>
-        </div>
-        <p className="mt-5 ">follow us on instagram</p>
-      </div>
+      <Social />
       <CarouselElement />
     </div>
   );
