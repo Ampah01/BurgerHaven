@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Footer.css";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear(); 
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
@@ -12,31 +13,35 @@ const Footer = () => {
       <footer className="footer bg-dark py-5 d-none d-md-block">
         <div className="container text-center">
           <h2 className="footer-title text-center">BURGERHAVEN</h2>
-          <p className="footer-address text-center text-white">ACCRA EAST LEGON | ACCRA 101</p>
-          <p className="footer-contacts text-center text-white">020.048.4457 | 027.124.9156</p>
+          <p className="footer-address text-center text-white">
+            ACCRA EAST LEGON | ACCRA 101
+          </p>
+          <p className="footer-contacts text-center text-white">
+            020.048.4457 | 027.124.9156
+          </p>
 
           <div className="footer-nav my-3">
-          <a href="#" className="footer-links mx-5">
+            <Link to="/" className="footer-links mx-5">
               ACCRA EAST
-            </a>
-            <a href="#" className="footer-links mx-5">
+            </Link>
+            <Link to="/" className="footer-links mx-5">
               HOME
-            </a>
-            <a href="#" className="footer-links mx-5">
+            </Link>
+            <Link to="/order" className="footer-links mx-5">
               ORDER
-            </a>
-            <a href="#" className="footer-links mx-5">
+            </Link>
+            <Link to="/gift-cards" className="footer-links mx-5">
               GIFT CARDS
-            </a>
-            <a href="#" className="footer-links mx-5">
+            </Link>
+            <Link to="/about" className="footer-links mx-5">
               ABOUT
-            </a>
-            <a href="#" className="footer-links mx-5">
+            </Link>
+            <Link to="/contact" className="footer-links mx-5">
               CONTACT
-            </a>
-            <a href="#" className="footer-links mx-5">
+            </Link>
+            <Link to="/press" className="footer-links mx-5">
               PRESS
-            </a>
+            </Link>
           </div>
 
           <div className="footer-icons my-3 ">

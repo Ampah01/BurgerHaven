@@ -128,11 +128,11 @@
 
 .order-btn {
   margin: 15px;
-  background-color: #722f37;
-  border: none;
-  padding: 10px 20px;
+  background-color: #722f37 !important;
+  border: none !important;
+  padding: 10px 20px !important;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
+  border-radius: 2px ;
 }
 
 .order-btn:hover {

@@ -3,7 +3,7 @@ import { Container, Row, Col, Button, Image, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 import "./Homepage.css"; // Import the custom CSS file
 
-const Homer = () => {
+const Starter = () => {
   const foodItems = [
     { src: "/images/starter.jpg", alt: "starters" },
     { src: "/images/burger.jpg", alt: "burgers" },
@@ -49,4 +49,4 @@ const Homer = () => {
   );
 };
 
-export default Homer;
+export default Starter;

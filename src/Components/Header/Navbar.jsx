@@ -1,4 +1,5 @@
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./Navbar.css";
@@ -59,7 +60,7 @@ const Header = () => {
       expand="md"
       bg="white"
       variant="light"
-      className="shadow-sm sticky-top"
+      className="shadow-sm sticky-top align-items-center"
     >
       <Container className="d-flex justify-content-md-between align-items-center mx-lg-10">
         <Navbar.Brand href="/" className="text-dark navbar-brand-custom">
@@ -82,7 +83,8 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav" in={isMenuOpen}>
           <Nav className="mx-auto text-center">
             <Nav.Link
-              href="/"
+              as={Link}
+              to="/"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
             >
@@ -104,7 +106,7 @@ const Header = () => {
               >
                 <NavDropdown.Item
                   href="/menu/lunch"
-                  className="nav-link-custom"
+                  className="nav-link-custom "
                 >
                   LUNCH (PDF)
                 </NavDropdown.Item>
@@ -136,28 +138,32 @@ const Header = () => {
             </NavDropdown>
 
             <Nav.Link
-              href="/order"
+              as={Link}
+              to="/order"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
             >
               ORDER
             </Nav.Link>
             <Nav.Link
-              href="/press"
+              as={Link}
+              to="/about"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
             >
               ABOUT
             </Nav.Link>
             <Nav.Link
-              href="/about"
+              as={Link}
+              to="/contact"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
             >
               CONTACT
             </Nav.Link>
             <Nav.Link
-              href="/contact"
+              as={Link}
+              to="/press"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
             >

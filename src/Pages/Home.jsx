@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import HomePage from "../Components/HomePage/HomePage";
-import Homer from "../Components/HomePage/Homer";
+import Starter from "../Components/HomePage/Starter";
 import HomeAbout from "../Components/HomePage/HomeAbout";
 import Testimonial from "../Components/HomePage/Testimonial";
 import TestimonialTwo from "../Components/HomePage/TestimonialTwo";
-import Footer from "../Components/Footer/Footer";
 import ConnectWithUs from "../Components/HomePage/ConnectWithUs";
 import DesktopCarousel from "../Components/HomePage/DesktopCarousel";
 import Wallpaper from "../Components/HomePage/Wallpaper";
@@ -30,14 +29,13 @@ const Home = () => {
   return (
     <div className="bg-light position-relative home">
       <HomePage />
-      <Homer />
+      <Starter />
       <HomeAbout />
       <Testimonial />
       <TestimonialTwo />
       <ConnectWithUs />
       <DesktopCarousel />
       <Wallpaper />
-      <Footer />
       
       {showButton && (
         <button
