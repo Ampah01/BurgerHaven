@@ -6,60 +6,15 @@ import "./DesktopCarousel.css";
 const DesktopCarousel = () => {
   const carouselRef = useRef(null);
   const videoRef = useRef(null);
-  const [showVideo, setShowVideo] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const posts = [
-    {
-      type: "image",
-      src: "/images/instagram1.jpg",
-      quote: "Savor the flavor of every bite 🍔",
-    },
-    {
-      type: "video",
-      src: "/video/instagram3.mp4",
-      quote: "Juicy, cheesy, and oh-so-tasty! 🍔🔥",
-    },
-    {
-      type: "image",
-      src: "/images/instagram2.jpg",
-      quote: "Good food, good mood 😋",
-    },
-    {
-      type: "image",
-      src: "/images/instagram3.jpg",
-      quote: "Every burger tells a story 🍔📖",
-    },
-    {
-      type: "image",
-      src: "/images/instagram4.jpg",
-      quote: "Fresh ingredients, bold flavors! 🌿🔥",
-    },
-    {
-      type: "video",
-      src: "/video/instagram4.mp4",
-      quote: "One bite, and you're hooked 🍔🤤",
-    },
-    {
-      type: "image",
-      src: "/images/instagram5.jpg",
-      quote: "Where every meal is a masterpiece 🎨🍔",
-    },
-    {
-      type: "video",
-      src: "/video/instagram5.mp4",
-      quote: "Burgers made with love ❤️",
-    },
-    {
-      type: "image",
-      src: "/images/instagram8.jpg",
-      quote: "The best memories are made around the table 🍽️",
-    },
-    {
-      type: "video",
-      src: "/video/instagram6.mp4",
-      quote: "Taste the perfection 🍔🔥",
-    },
+    { type: "image", src: "/images/instagram1.jpg", quote: "Savor the flavor of every bite 🍔" },
+    { type: "image", src: "/images/instagram2.jpg", quote: "Good food, good mood 😋" },
+    { type: "image", src: "/images/instagram3.jpg", quote: "Every burger tells a story 🍔📖" },
+    { type: "image", src: "/images/instagram4.jpg", quote: "Fresh ingredients, bold flavors! 🌿🔥" },
+    { type: "image", src: "/images/instagram5.jpg", quote: "Where every meal is a masterpiece 🎨🍔" },
+    { type: "image", src: "/images/instagram8.jpg", quote: "The best memories are made around the table 🍽️" }
   ];
 
   const scrollCarousel = (direction) => {
@@ -84,10 +39,7 @@ const DesktopCarousel = () => {
       <h3 className="desktop-carousel-title py-5">Follow us on Instagram</h3>
 
       <div className="desktop-carousel-wrapper">
-        <button
-          className="desktop-carousel-prev"
-          onClick={() => scrollCarousel("prev")}
-        >
+        <button className="desktop-carousel-prev" onClick={() => scrollCarousel("prev")}>
           <FaChevronLeft />
         </button>
         <div className="desktop-carousel-track" ref={carouselRef}>
@@ -95,28 +47,12 @@ const DesktopCarousel = () => {
             <div className="desktop-carousel-item" key={index}>
               {post.type === "image" ? (
                 <img src={post.src} alt={`Post ${index + 1}`} />
-              ) : (
-                <div className="video-container">
-                  <video
-                    className="desktop-video"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                  >
-                    <source src={post.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              )}
+              ) : null}
               <div className="desktop-quote">{post.quote}</div>
             </div>
           ))}
         </div>
-        <button
-          className="desktop-carousel-next"
-          onClick={() => scrollCarousel("next")}
-        >
+        <button className="desktop-carousel-next" onClick={() => scrollCarousel("next")}>
           <FaChevronRight />
         </button>
       </div>
@@ -153,8 +89,7 @@ const DesktopCarousel = () => {
             <p className="text-danger fs-4">We love...</p>
             <blockquote className="blockquote">
               <p>
-                "I love their Chicken Parmesan. It tastes just like chicken but
-                it’s all soy!"
+                "I love their Chicken Parmesan. It tastes just like chicken but it’s all soy!"
               </p>
               <footer className="blockquote-footer">Janet Jackson</footer>
             </blockquote>
