@@ -60,7 +60,7 @@ const Header = () => {
       expand="md"
       bg="white"
       variant="light"
-      className="shadow-sm sticky-top align-items-center"
+      className="shadow-sm sticky-top rounded-0"
     >
       <Container className="d-flex justify-content-md-between align-items-center mx-lg-10">
         <Navbar.Brand href="/" className="text-dark navbar-brand-custom">
@@ -105,31 +105,36 @@ const Header = () => {
                 className="nav-menu"
               >
                 <NavDropdown.Item
-                  href="/menu/lunch"
-                  className="nav-link-custom "
+                  href="/menu/burger_menu.pdf"
+                  target="_blank"
+                  className="nav-link-custom"
                 >
                   LUNCH (PDF)
                 </NavDropdown.Item>
                 <NavDropdown.Item
-                  href="/menu/all_day_menu"
+                  href="/menu/burger_menu.pdf"
+                  target="_blank"
                   className="nav-link-custom"
                 >
                   ALL DAY MENU (PDF)
                 </NavDropdown.Item>
                 <NavDropdown.Item
-                  href="/menu/burger"
+                  href="/menu/burger_menu.pdf"
+                  target="_blank"
                   className="nav-link-custom"
                 >
                   BURGER (PDF)
                 </NavDropdown.Item>
                 <NavDropdown.Item
-                  href="/menu/beer/no_beer"
+                  href="/menu/burger_menu.pdf"
+                  target="_blank"
                   className="nav-link-custom"
                 >
                   BEER / NO BEER (PDF)
                 </NavDropdown.Item>
                 <NavDropdown.Item
-                  href="/menu/specials"
+                  href="/menu/burger_menu.pdf"
+                  target="_blank"
                   className="nav-link-custom"
                 >
                   SPECIALS (PDF)

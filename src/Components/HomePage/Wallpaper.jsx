@@ -16,11 +16,15 @@ const Wallpaper = () => {
 
   return (
     <div
-      className="wallpaper d-none d-md-block"
+      className="wallpaper d-none d-md-block d-flex text-white"
       style={{
-        backgroundSize: `${backgroundSize}%`,
+        backgroundSize: `${backgroundSize}%`
       }}
-    ></div>
+    >
+      <h1 className="display-3 fw-bold fadeIn">
+        Le restaurant de hamburgers
+      </h1>
+    </div>
   );
 };
 
