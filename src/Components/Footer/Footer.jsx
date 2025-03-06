@@ -21,25 +21,22 @@ const Footer = () => {
           </p>
 
           <div className="footer-nav my-3">
-            <Link to="/" className="footer-links px-2">
+            <Link to="/" className="footer-links px-3">
               ACCRA EAST
             </Link>
-            <Link to="/" className="footer-links px-2">
+            <Link to="/" className="footer-links px-3">
               HOME
             </Link>
-            <Link to="/order" className="footer-links px-2">
+            <Link to="/order" className="footer-links px-3">
               ORDER
             </Link>
-            <Link to="/gift-cards" className="footer-links px-2">
-              GIFT CARDS
-            </Link>
-            <Link to="/about" className="footer-links px-2">
+            <Link to="/about" className="footer-links px-3">
               ABOUT
             </Link>
-            <Link to="/contact" className="footer-links px-2">
+            <Link to="/contact" className="footer-links px-3">
               CONTACT
             </Link>
-            <Link to="/press" className="footer-links px-1">
+            <Link to="/press" className="footer-links px-3">
               PRESS
             </Link>
           </div>

@@ -14,22 +14,20 @@ const TestimonialTwo = () => {
   }, []);
 
   return (
-    <div className="d-block d-md-none container  py-5">
-      <p className="testimonial-heading fade-in">testimonials</p>
-      <p className="text-danger fade-in">We love...</p>
+    <div className="d-block d-md-none container py-3">
+      <p className="testimonial-heading ">testimonials</p>
+      <p className="text-danger ">We love...</p>
 
       {showVideo && (
         <div className="video-container slide-in">
-          <iframe
-            className="testimonial-video"
-            src="/video/file.mp4"
-            title="Testimonial Video"
-            allowFullScreen
-          ></iframe>
+          <video className="testimonial-video" controls>
+            <source src="/video/file.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       )}
 
-      <div className="testimonial-text fade-in">
+      <div className="testimonial-text">
         <blockquote className="blockquote">
           <p>
             "I love their Chicken Parmesan. It tastes just like chicken but it’s

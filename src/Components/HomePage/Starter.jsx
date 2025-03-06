@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button, Image, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
-import "./Homepage.css";
+import "./HomePage.css";
 
 const Starter = () => {
   const navigate = useNavigate();

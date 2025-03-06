@@ -1,9 +1,9 @@
-import "./HomeAbout.css";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
 import CarouselElement from "./CarouselElement";
+import "./HomeAbout.css";
 import Social from "./Social";
 
 const HomeAbout = () => {
