@@ -5,8 +5,11 @@ import { motion } from "framer-motion";
 import CarouselElement from "./CarouselElement";
 import "./HomeAbout.css";
 import Social from "./Social";
+import { useNavigate } from "react-router-dom";
 
 const HomeAbout = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="homeabout">
       <div className="image-container"></div>
@@ -95,7 +98,9 @@ const HomeAbout = () => {
           <p>027.124.9156</p>
 
           <div className="about-button-container">
-            <button className="about-button">About Us</button>
+            <button className="about-button" onClick={() => navigate("/about")}>
+              About Us
+            </button>
           </div>
         </div>
       </div>
@@ -112,7 +117,9 @@ const HomeAbout = () => {
                 To place an order for pickup, please order via{" "}
                 <a href="#">Square</a>.
               </p>
-              <button className="about-button">ORDER PICKUP</button>
+              <button className="about-button" onClick={() => navigate("/order")}>
+              ORDER PICKUP
+            </button>
             </div>
             <div className="order-section">
               <h3>DELIVERY EXPANDED</h3>

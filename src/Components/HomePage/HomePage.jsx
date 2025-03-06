@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       const homepage = document.querySelector(".homepage");
@@ -27,7 +29,7 @@ const HomePage = () => {
           Where every bite is a taste of heaven! 🍔✨
         </p>
         <div className="d-block d-sm-none">
-          <Button variant="dark" size="sm" className="order-btn">
+          <Button variant="dark" size="sm" className="order-btn"  onClick={() => navigate("/order")}>
             ORDER NOW
           </Button>
         </div>
