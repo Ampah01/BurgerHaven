@@ -1,7 +1,6 @@
 .carousel-container {
     width: 100%;
-    max-width: 600px;
-    margin: auto;
+    margin: auto
   }
   
   .video-wrapper {
@@ -27,7 +26,6 @@
     transition: background 0.3s ease-in-out;
   }
   
-  /* Center the play button only for small screens */
   @media (max-width: 640px) {
     .play-button {
       top: 50%;
