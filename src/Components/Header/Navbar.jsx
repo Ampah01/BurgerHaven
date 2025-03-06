@@ -87,6 +87,7 @@ const Header = () => {
               to="/"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
+              onClick={() => setIsMenuOpen(false)}
             >
               HOME
             </Nav.Link>
@@ -147,6 +148,7 @@ const Header = () => {
               to="/order"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
+              onClick={() => setIsMenuOpen(false)}
             >
               ORDER
             </Nav.Link>
@@ -155,6 +157,7 @@ const Header = () => {
               to="/about"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
+              onClick={() => setIsMenuOpen(false)}
             >
               ABOUT
             </Nav.Link>
@@ -163,6 +166,7 @@ const Header = () => {
               to="/contact"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
+              onClick={() => setIsMenuOpen(false)}
             >
               CONTACT
             </Nav.Link>
@@ -171,6 +175,7 @@ const Header = () => {
               to="/press"
               className="nav-link-custom"
               onMouseEnter={handleNavLinkEnter}
+              onClick={() => setIsMenuOpen(false)}
             >
               PRESS
             </Nav.Link>

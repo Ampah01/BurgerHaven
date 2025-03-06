@@ -1,0 +1,17 @@
+
+  .button-order-pickup {
+    background-color: #722f37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+  
+  .button-order-pickup:hover {
+    border: 1px solid #722f37
+  }
+  .link-text a{
+    color: #722f37
+  }

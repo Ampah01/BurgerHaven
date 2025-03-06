@@ -1,19 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button, Image, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
-import "./Homepage.css"; // Import the custom CSS file
+import "./Homepage.css";
 
 const Starter = () => {
+  const navigate = useNavigate();
+
   const foodItems = [
     { src: "/images/starter.jpg", alt: "starters" },
     { src: "/images/burger.jpg", alt: "burgers" },
     { src: "/images/main.jpg", alt: "main" },
     { src: "/images/dessert.jpg", alt: "desserts" },
   ];
-  
+
   return (
     <div className="starter-section d-none d-sm-block">
-
       <section className="starter-packs">
         <Container>
           <Row className="g-4 justify-content-center">
@@ -40,7 +42,12 @@ const Starter = () => {
               </Col>
             ))}
           </Row>
-          <Button variant="dark" size="sm" className="order-btn mt-3 order">
+          <Button
+            variant="dark"
+            size="sm"
+            className="order-btn mt-3 order"
+            onClick={() => navigate("/order")} 
+          >
             ORDER NOW
           </Button>
         </Container>

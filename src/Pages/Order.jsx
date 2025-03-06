@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import OrderPage from "../Components/OrderPage/OrderPage"
 
 const Order = () => {
   return (
     <div>
-      <h1>Order1</h1>
+      <OrderPage />
     </div>
   )
 }

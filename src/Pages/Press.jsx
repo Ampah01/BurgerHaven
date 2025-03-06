@@ -1,9 +1,10 @@
 import React from 'react'
+import PressPage from '../Components/PressPage/PressPage'
 
 const Press = () => {
   return (
     <div>
-      <h1>Press</h1>
+      <PressPage />
     </div>
   )
 }
