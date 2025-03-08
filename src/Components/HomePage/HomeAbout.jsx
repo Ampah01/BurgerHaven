@@ -118,7 +118,7 @@ const HomeAbout = () => {
                 <a href="#">Square</a>.
               </p>
               <button className="about-button" onClick={() => navigate("/order")}>
-              ORDER PICKUP
+              Order Pickup
             </button>
             </div>
             <div className="order-section">
