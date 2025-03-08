@@ -84,13 +84,13 @@ const Footer = () => {
       </footer>
 
       {/* Mobile View */}
-      <footer className="footer bg-dark text-white py-3 d-block d-md-none">
+      <footer className="footer bg-dark text-white py-3 d-block d-md-none ">
         <div className="container text-center title">
-          <p className="footer-title">BURGERHAVEN</p>
-          <p className="footer-address">ACCRA EAST LEGON</p>
+          <p className="footer-title text-center text-white">BURGERHAVEN</p>
+          <p className="footer-address text-center text-white">ACCRA EAST LEGON</p>
           <hr className="footer-divider" />
-          <p className="footer-contacts">020.048.4457 | 027.124.9156</p>
-          <div className="footer-icons my-2">
+          <p className="footer-contacts text-center text-white">020.048.4457 | 027.124.9156</p>
+          <div className="footer-icons my-1">
             <a
               href="https://facebook.com"
               target="_blank"
@@ -118,11 +118,11 @@ const Footer = () => {
               <FaInstagram size={15} />
             </a>
           </div>
-          <div className="foot-last">
-            <p className="footer-copy">
+          <div className="foot-last ">
+            <p className="footer-copy text-center text-white">
               © {currentYear} Burgerhaven - All Rights Reserved
             </p>
-            <p className="footer-designer">
+            <p className="footer-designer text-center text-white">
               Web and Menu Designs by{" "}
               <a
                 href="https://my-portfolio-lac-rho.vercel.app/"

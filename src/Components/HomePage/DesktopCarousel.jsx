@@ -9,12 +9,36 @@ const DesktopCarousel = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const posts = [
-    { type: "image", src: "/images/instagram1.jpg", quote: "Savor the flavor of every bite 🍔" },
-    { type: "image", src: "/images/instagram2.jpg", quote: "Good food, good mood 😋" },
-    { type: "image", src: "/images/instagram3.jpg", quote: "Every burger tells a story 🍔📖" },
-    { type: "image", src: "/images/instagram4.jpg", quote: "Fresh ingredients, bold flavors! 🌿🔥" },
-    { type: "image", src: "/images/instagram5.jpg", quote: "Where every meal is a masterpiece 🎨🍔" },
-    { type: "image", src: "/images/instagram8.jpg", quote: "The best memories are made around the table 🍽️" }
+    {
+      type: "image",
+      src: "/images/instagram1.jpg",
+      quote: "Savor the flavor of every bite 🍔",
+    },
+    {
+      type: "image",
+      src: "/images/instagram2.jpg",
+      quote: "Good food, good mood 😋",
+    },
+    {
+      type: "image",
+      src: "/images/instagram3.jpg",
+      quote: "Every burger tells a story 🍔📖",
+    },
+    {
+      type: "image",
+      src: "/images/instagram4.jpg",
+      quote: "Fresh ingredients, bold flavors! 🌿🔥",
+    },
+    {
+      type: "image",
+      src: "/images/instagram5.jpg",
+      quote: "Where every meal is a masterpiece 🎨🍔",
+    },
+    {
+      type: "image",
+      src: "/images/instagram8.jpg",
+      quote: "The best memories are made around the table 🍽️",
+    },
   ];
 
   const scrollCarousel = (direction) => {
@@ -35,11 +59,14 @@ const DesktopCarousel = () => {
   };
 
   return (
-    <div className="desktop-carousel-container d-none d-md-block">
+    <div className="desktop-carousel-container d-none d-md-block mb-5">
       <h3 className="desktop-carousel-title py-5">Follow us on Instagram</h3>
 
       <div className="desktop-carousel-wrapper">
-        <button className="desktop-carousel-prev" onClick={() => scrollCarousel("prev")}>
+        <button
+          className="desktop-carousel-prev"
+          onClick={() => scrollCarousel("prev")}
+        >
           <FaChevronLeft />
         </button>
         <div className="desktop-carousel-track" ref={carouselRef}>
@@ -52,7 +79,10 @@ const DesktopCarousel = () => {
             </div>
           ))}
         </div>
-        <button className="desktop-carousel-next" onClick={() => scrollCarousel("next")}>
+        <button
+          className="desktop-carousel-next"
+          onClick={() => scrollCarousel("next")}
+        >
           <FaChevronRight />
         </button>
       </div>
@@ -75,8 +105,10 @@ const DesktopCarousel = () => {
               </div>
 
               {!isPlaying && (
-                <div className="overlay-text">
-                  <p title="The Tonight Show">THE TONIGHT SHOW</p>
+                <div className="overlay-wrapper">
+                  <p className="overlay-text text-white" title="The Tonight Show">
+                    THE TONIGHT SHOW
+                  </p>
                   <button className="play" onClick={handlePlay}>
                     <FaPlay className="icon-play" />
                   </button>
@@ -89,7 +121,8 @@ const DesktopCarousel = () => {
             <p className="text-danger fs-4">We love...</p>
             <blockquote className="blockquote">
               <p>
-                "I love their Chicken Parmesan. It tastes just like chicken but it’s all soy!"
+                "I love their Chicken Parmesan. It tastes just like chicken but
+                it’s all soy!"
               </p>
               <footer className="blockquote-footer">Janet Jackson</footer>
             </blockquote>
