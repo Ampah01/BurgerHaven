@@ -1,25 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import HomePage from "../Components/HomePage/HomePage";
 import Starter from "../Components/HomePage/Starter";
 import HomeAbout from "../Components/HomePage/HomeAbout";
-import Testimonial from "../Components/HomePage/Testimonial";
-import TestimonialTwo from "../Components/HomePage/TestimonialTwo";
-import ConnectWithUs from "../Components/HomePage/ConnectWithUs";
-import DesktopCarousel from "../Components/HomePage/DesktopCarousel";
-import Wallpaper from "../Components/HomePage/Wallpaper";
-import "./Home.css"
+import "./Home.css";
+
+
+const Testimonial = lazy(() => import("../Components/HomePage/Testimonial"));
+const TestimonialTwo = lazy(() => import("../Components/HomePage/TestimonialTwo"));
+const ConnectWithUs = lazy(() => import("../Components/HomePage/ConnectWithUs"));
+const DesktopCarousel = lazy(() => import("../Components/HomePage/DesktopCarousel"));
+const Wallpaper = lazy(() => import("../Components/HomePage/Wallpaper"));
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
+    let timeout;
     const handleScroll = () => {
-      setShowButton(window.scrollY > 300);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        setShowButton(window.scrollY > 300);
+      }, 100); 
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeout);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -31,17 +40,30 @@ const Home = () => {
       <HomePage />
       <Starter />
       <HomeAbout />
-      <Testimonial />
-      <TestimonialTwo />
-      <ConnectWithUs />
-      <DesktopCarousel />
-      <Wallpaper />
-      
+
+      {/* Suspense to prevent blocking */}
+      <Suspense fallback={<div>Loading Testimonials...</div>}>
+        <Testimonial />
+        <TestimonialTwo />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading Socials...</div>}>
+        <ConnectWithUs />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading Carousel...</div>}>
+        <DesktopCarousel />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading Wallpaper...</div>}>
+        <Wallpaper />
+      </Suspense>
+
       {showButton && (
         <button
           className="position-fixed bottom-0 end-0 m-4 rounded-circle p-3 shadow"
           onClick={scrollToTop}
-          style={{ backgroundColor: "white ", color: "black", border: "none" }}
+          style={{ backgroundColor: "white", color: "black", border: "none" }}
         >
           <FaArrowUp size={20} />
         </button>

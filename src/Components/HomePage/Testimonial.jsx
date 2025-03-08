@@ -31,18 +31,13 @@ const testimonials = [
 
 const Testimonial = () => {
   const [visible, setVisible] = useState(false);
-  const [clicked, setClicked] = useState({}); 
   const sectionRef = useRef(null);
+  const clickedState = useRef({});
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          setTimeout(() => setVisible(false), 1500); 
-        }
-      },
-      { threshold: 0.5 } 
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.5 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -51,10 +46,12 @@ const Testimonial = () => {
   }, []);
 
   const handleClick = (id) => {
-    setClicked((prev) => ({ ...prev, [id]: true }));
-    setTimeout(() => {
-      setClicked((prev) => ({ ...prev, [id]: false }));
-    }, 1500);
+    if (!clickedState.current[id]) {
+      clickedState.current[id] = true;
+      setTimeout(() => {
+        clickedState.current[id] = false;
+      }, 1500);
+    }
   };
 
   return (
@@ -69,9 +66,7 @@ const Testimonial = () => {
               <img
                 src={testimonial.logo}
                 alt="logo"
-                className={`mx-auto mb-3 ${
-                  visible || clicked[testimonial.id] ? "rotate-image" : ""
-                }`}
+                className={`mx-auto mb-3 ${visible ? "rotate-image" : ""}`}
                 onClick={() => handleClick(testimonial.id)}
                 style={{
                   width: "80px",

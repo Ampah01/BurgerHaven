@@ -7,10 +7,6 @@
     position: relative;
   }
   
-  .video-wrapper {
-    position: relative;
-  }
-  
   .play-button {
     position: absolute;
     background: rgba(0, 0, 0, 0.6);
